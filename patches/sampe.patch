@@ -1,0 +1,21 @@
+From e7e4b1f7e3b3a1e769cece52cabb1406d060810b Mon Sep 17 00:00:00 2001
+From: Yosef Kurniawan <yosef.koko@sirclo.com>
+Date: Fri, 14 Oct 2022 17:18:19 +0700
+Subject: [PATCH] Dummy content for testing patch
+
+---
+ core/modules/theme/pages/_app.js | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/core/modules/theme/pages/_app.js b/core/modules/theme/pages/_app.js
+index 3ea2cdd57..31b2a7cf6 100644
+--- a/core/modules/theme/pages/_app.js
++++ b/core/modules/theme/pages/_app.js
+@@ -369,6 +369,7 @@ class MyApp extends App {
+                     <CssBaseline />
+                     <PageProgressLoader />
+                     <Component {...pageProps} />
++                    <div>Ini content dari patch</div>
+                 </ThemeProvider>
+             </>
+         );

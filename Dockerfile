@@ -5,6 +5,7 @@ ARG src_dir="/usr/src/app"
 WORKDIR /usr/src/app
 COPY swift.config.js swift.config.js
 COPY project_patch.sh project_patch.sh
+COPY patches patches
 
 RUN yarn add https://github.com/yosefkurniawan/swift-pwa-custom.git#master && \
     rm -rf ${src_dir}/src && \

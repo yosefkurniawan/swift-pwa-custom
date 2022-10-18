@@ -16,7 +16,7 @@ steps:
     agents:
       - "icube-staging=true"
   
-  - block: "Release to production"
+#  - block: "Release to production"
 
 #  - label: ":rocket: Deploy iii-prod"
 #    command:

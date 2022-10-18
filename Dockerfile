@@ -3,11 +3,12 @@ ARG src_dir="/usr/src/app"
 
 # Setting working directory. All the path will be relative to WORKDIR
 WORKDIR /usr/src/app
+COPY swift.config.js swift.config.js
+COPY project_patch.sh project_patch.sh
 
 RUN yarn add https://github.com/yosefkurniawan/swift-pwa-custom.git#master && \
     rm -rf ${src_dir}/src && \
     cp -r ${src_dir}/node_modules/swift-pwa-custom/src ${src_dir}/src
-COPY swift.config.js /usr/src/app/swift.config.js
 
 # Patch pwa
 RUN sh project_patch.sh

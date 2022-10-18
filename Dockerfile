@@ -1,4 +1,4 @@
-FROM swift-pwa:2.5.12-1666087815
+FROM asia.gcr.io/sirclo-iii-nonprod/swift-pwa:2.5.12-1666087815
 ARG src_dir="/usr/src/app"
 
 #Install pm2

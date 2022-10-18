@@ -1,19 +1,18 @@
-FROM node:14
+FROM swift-pwa:2.5.12-1666087815
+ARG src_dir="/usr/src/app"
 
 #Install pm2
 RUN yarn global add pm2;
 
 # Setting working directory. All the path will be relative to WORKDIR
-WORKDIR /usr/src/app
+WORKDIR ${src_dir}
 
-# Copying source files
-COPY . .
-
-# Install all dependencies pwa
-RUN yarn install;
+RUN yarn add https://github.com/yosefkurniawan/swift-pwa-custom.git#master && \
+    rm -rf src
+COPY node_modules/swift-pwa-custom/src src
 
 # Patch pwa
-RUN sh patch.sh
+RUN sh project_patch.sh
 
 # build pwa
 RUN yarn build; 

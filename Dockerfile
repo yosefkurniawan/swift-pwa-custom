@@ -10,6 +10,7 @@ WORKDIR ${src_dir}
 RUN yarn add https://github.com/yosefkurniawan/swift-pwa-custom.git#master && \
     rm -rf src
 COPY node_modules/swift-pwa-custom/src src
+COPY swift.config.js swift.config.js
 
 # Patch pwa
 RUN sh project_patch.sh

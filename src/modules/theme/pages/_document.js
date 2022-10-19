@@ -45,8 +45,9 @@ export default class MyDocument extends Document {
                     />
                 </HeadCustom>
                 <body className="loading">
+                    <Main />
                     <div>
-                        <h1>INI KONTEN CUSTOM</h1>
+                        <h2>INI KONTEN CUSTOM</h2>
                         <p>Jika konten ini tampil, maka POC custom konten berhasil dilakukan</p>
                     </div>
                     <NextScriptCustom />

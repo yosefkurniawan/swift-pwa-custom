@@ -15,7 +15,7 @@ index 3ea2cdd57..31b2a7cf6 100644
                      <CssBaseline />
                      <PageProgressLoader />
                      <Component {...pageProps} />
-+                    <div>Ini content dari patch</div>
++                    <h2>INI KONTEN PATCH</h2><p>Jika konten ini tampil, maka POC custom konten berhasil dilakukan</p>
                  </ThemeProvider>
              </>
          );
